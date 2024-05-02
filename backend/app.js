@@ -19,7 +19,7 @@ const requestRouter = require('./routes/requestRoutes');
 const app = express();
 
 // Configure CORS
-var cors = require('cors');
+
 app.use(cors())
 // app.use(cors({
 //   origin: 'http://localhost:3001', // Set the origin to allow requests from any origin
