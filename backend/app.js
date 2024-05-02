@@ -19,8 +19,6 @@ const reviewRouter=require('./routes/reviewRoutes')
 const requestRouter=require('./routes/requestRoutes')
 
 const app=express();
-const cors = require('cors');
-app.use(cors());
 
 
 app.use(cors({
