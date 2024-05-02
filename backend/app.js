@@ -2,6 +2,7 @@ const express=require('express')
 const morgan=require('morgan')
 const cookieParser = require('cookie-parser');
 const cors = require('cors');
+const path = require('path')
 
 
 const AppError =require('./utils/appError')
@@ -9,6 +10,7 @@ const globleErrorHandler=require('./controller/errorController')
 
 const dotenv=require('dotenv')
 dotenv.config({path:'./config.env'})
+const _dirname = path.resolve();
 
 
 const userRouter=require('./routes/userRoutes')
@@ -36,6 +38,12 @@ app.use('/user',userRouter)
 app.use('/venue',venueRouter)
 app.use('/review',reviewRouter)
 app.use('/request',requestRouter)
+
+app.use(express.static(path.join(_dirname, '/frontend/build')));
+
+app.get('*', (req, res) => {
+    res.sendFile(path.join(_dirname, 'frontend', 'build', 'index.html'));
+  })
 
 app.all('*',function(req,res,next){
     next(new AppError(`Can't find the ${req.originalUrl} on this server`))
