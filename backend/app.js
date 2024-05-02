@@ -2,12 +2,14 @@ const express=require('express')
 const morgan=require('morgan')
 const cookieParser = require('cookie-parser');
 //const cors = require('cors');
+var cors = require('cors')
 const path = require('path')
 
 
 const AppError =require('./utils/appError')
 const globleErrorHandler=require('./controller/errorController')
 
+app.use(cors()) 
 const dotenv=require('dotenv')
 dotenv.config({path:'./config.env'})
 const _dirname = path.resolve();
@@ -20,10 +22,13 @@ const requestRouter=require('./routes/requestRoutes')
 
 const app=express();
 
-app.use((req, res, next) => {
-  res.header('Access-Control-Allow-Origin', '*');
-  next();
-});
+// app.use((req, res, next) => {
+//   res.header('Access-Control-Allow-Origin', '*');
+//   next();
+// });
+
+
+
 
 // app.use(cors({
 //   origin: ['http://localhost:3001', 'https://event-management-system-mern-1.onrender.com'], // Replace with your frontend's URL
