@@ -18,10 +18,13 @@ const venueRouter=require('./routes/venueRoutes')
 const reviewRouter=require('./routes/reviewRoutes')
 const requestRouter=require('./routes/requestRoutes')
 
-const app=express()
+const app=express();
+const cors = require('cors');
+app.use(cors());
+
 
 app.use(cors({
-    origin: 'http://localhost:3000',  // Replace with your frontend's URL
+    origin: 'http://localhost:3001',  // Replace with your frontend's URL
     credentials: true,
   }));
   
