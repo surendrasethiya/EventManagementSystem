@@ -22,7 +22,7 @@ const app=express();
 
 
 app.use(cors({
-    origin: 'http://localhost:3001',  // Replace with your frontend's URL
+  origin: ['http://localhost:3001', 'https://event-management-system-mern-1.onrender.com'], // Replace with your frontend's URL
     credentials: true,
   }));
   
