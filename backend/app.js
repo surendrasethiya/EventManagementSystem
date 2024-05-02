@@ -2,14 +2,14 @@ const express=require('express')
 const morgan=require('morgan')
 const cookieParser = require('cookie-parser');
 //const cors = require('cors');
-var cors = require('cors')
+const cors = require('cors')
 const path = require('path')
 
 
 const AppError =require('./utils/appError')
 const globleErrorHandler=require('./controller/errorController')
 
-app.use(cors()) 
+
 const dotenv=require('dotenv')
 dotenv.config({path:'./config.env'})
 const _dirname = path.resolve();
@@ -18,9 +18,11 @@ const _dirname = path.resolve();
 const userRouter=require('./routes/userRoutes')
 const venueRouter=require('./routes/venueRoutes')
 const reviewRouter=require('./routes/reviewRoutes')
-const requestRouter=require('./routes/requestRoutes')
+const requestRouter=require('./routes/requestRoutes');
+const { constants } = require('buffer');
 
 const app=express();
+app.use(cors()) 
 
 // app.use((req, res, next) => {
 //   res.header('Access-Control-Allow-Origin', '*');
