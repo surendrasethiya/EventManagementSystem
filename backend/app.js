@@ -20,8 +20,8 @@ const app = express();
 
 // Configure CORS
 app.use(cors({
-  origin: 'http://localhost:3001', // Set the origin to match your frontend's URL
-  credentials: false,
+  origin: 'http://localhost:3000', // Set the origin to match your frontend's URL
+  credentials: true,
 }));
 
 app.use(express.json());
