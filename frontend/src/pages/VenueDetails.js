@@ -16,7 +16,7 @@ export default function VenueDetails() {
   useEffect(() => {
     // Define a function to fetch venue data
     const fetchVenueData = async () => {
-        await axios.get(`http://localhost:3001/venue/${venueId}`)
+        await axios.get(`http://localhost:3000/venue/${venueId}`)
         .then(response => {
             setVenueData(response.data);  
             setLoading(false)
