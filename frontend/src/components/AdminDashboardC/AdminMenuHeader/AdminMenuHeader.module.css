@@ -1,0 +1,32 @@
+.adminMenuHeaderWrapper{
+    width: 100%;
+    background-color: black;
+    padding: 10px 20px;
+    position: fixed;
+    top: 8%;
+    z-index: 999;
+
+}
+
+.adminMenuHeaderWrapper>a>button{
+    padding: 10px 20px;
+    cursor: pointer;
+    margin-right: 10px;
+    outline: none;
+    border: none;
+    background-color: black;
+    color:white;
+    font-size: large;
+    font-weight: 500;
+}
+
+.adminMenuHeaderWrapper>a>button:hover{
+    background-color: orange;
+    color: white;
+}
+
+@media (max-width:750px){
+    .adminMenuHeaderWrapper{
+        position: relative;
+    }
+}

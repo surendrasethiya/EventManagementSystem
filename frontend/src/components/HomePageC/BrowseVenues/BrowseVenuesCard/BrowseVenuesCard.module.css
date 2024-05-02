@@ -1,0 +1,31 @@
+/* .browserVenueCardWrapper{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 300px;
+    background-color: floralwhite;
+    margin: 0 20px 20px 20px;
+    cursor: pointer;
+    border: 3px solid black;
+}
+
+.browserVenueCardWrapper>div>img{
+    width: 100%;
+    transition: all 0.5s ease;
+}
+
+.browserVenueCardWrapper>div{
+    overflow: hidden;
+}
+
+.browserVenueCardWrapper>div>img:hover{
+    transform: scale(1.15);
+}
+
+.browserVenueCardWrapper>p{
+    font-size: 25px;
+    font-weight: 500;
+    margin: 8px 0px;
+    text-align: center;
+  } */

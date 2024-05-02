@@ -1,0 +1,38 @@
+.uniqueVenueWrapper{
+/* background-color: aqua; */
+display: flex;
+align-items: center;
+justify-content: center;
+flex-direction: column;
+padding: 0px 30px;
+margin-bottom: 80px;
+
+}
+
+.uniqueVenueWrapper>h1{
+    margin-bottom: 5px;
+    
+}
+
+.uniqueVenueWrapper>p{
+    margin-bottom: 30px;
+}
+
+.uniqueVenueCardWrapper{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 30px; 
+}
+
+@media(max-width:750px) {
+    .uniqueVenueCardWrapper{
+        flex-direction: column;
+        width: 100%;
+    }
+
+    .uniqueVenueWrapper>h1{
+        font-size:27px ;
+    }
+
+}

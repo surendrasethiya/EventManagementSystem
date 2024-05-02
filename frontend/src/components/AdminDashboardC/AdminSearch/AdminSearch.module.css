@@ -1,0 +1,63 @@
+.adminSearchWrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+  margin-top: 80px;
+}
+
+.adminSearchWrapper > div > input {
+  padding: 15px;
+  font-size: 20px;
+  outline: none;
+  border: none;
+  box-shadow: 0px 0px 5px rgb(94, 92, 92);
+}
+
+.adminSearchWrapper > div > button {
+  padding: 15px;
+  font-size: 20px;
+  outline: none;
+  border: none;
+  background-color: #f7000c;
+  color: white;
+  cursor: pointer;
+}
+
+.adminHomeCardWrapper{
+  display: flex;
+  justify-content: center;
+  gap: 40px;
+  flex-wrap: wrap;
+  padding: 50px;
+  padding-top: 20px;
+}
+
+.adminSearchWrapper > div > button:hover {
+  background-color: #d7101a;
+}
+
+@media (max-width: 768px) {
+
+  .adminSearchWrapper{
+    margin-top: 0;
+  }
+  .adminSearchWrapper > div > input:nth-child(2),
+  .adminSearchWrapper > div > input:nth-child(3) {
+    display: none;
+  }
+
+  .adminSearchWrapper > div > input {
+    padding: 10px;
+    font-size: 18px;
+  }
+
+  .adminSearchWrapper > div > button {
+    padding: 10px;
+    font-size: 18px;
+  }
+
+  .adminHomeCardWrapper{
+    padding: 15px;
+  }
+}

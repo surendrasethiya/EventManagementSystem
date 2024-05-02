@@ -1,0 +1,33 @@
+.getQuoteWrapper{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 40px;
+}
+
+.getQuoteWrapper>div{
+    width: 80%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 25px;
+    flex-direction: column;
+    box-shadow: 0px 0px 5px black;
+
+}
+
+.getQuoteWrapper>div>p{
+    font-size: x-large;
+    font-weight: 500;
+    margin-bottom: 15px;
+}
+
+.getQuoteWrapper>div>a>button{
+    padding: 10px 20px;
+    font-size: 20px;
+    cursor: pointer;
+    background-color: rgb(210 4 9);
+    color: white;
+    border: none;
+    outline: none;
+}

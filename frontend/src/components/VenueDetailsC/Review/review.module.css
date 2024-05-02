@@ -1,0 +1,58 @@
+.reviewWrapper{
+    margin-top: 40px;
+    padding: 15px 30px;
+    box-shadow: 0px 0px 10px black;
+    border-radius: 5px;
+}
+
+.reviewWrapper>div:nth-child(1)>p:nth-child(1){
+    font-size: x-large;
+    flex: 1;
+}
+
+.reviewWrapper>div:nth-child(2){
+    margin-top: 10px;
+}
+
+.reviewWrapper>div:nth-child(2)>form>div:nth-child(1)>span{
+    padding: 5px 10px;
+    border: none;
+    cursor: pointer;
+}
+
+.reviewWrapper>div:nth-child(2)>form>div:nth-child(1)>span:hover{
+    background-color: antiquewhite;
+}
+
+.selectedRating{
+    background-color:antiquewhite ;
+}
+
+.reviewWrapper>div:nth-child(2)>form>div:nth-child(2){
+    margin-top: 10px;
+    padding: 10px;
+    width: 100%;
+    box-shadow: 0px 0px 5px orange;
+    border-radius: 25px;
+}
+
+.reviewWrapper>div:nth-child(2)>form>div:nth-child(2)>input{
+    padding: 10px;
+    width: 85%;
+    border: none;
+    outline: none;
+    font-size: larger
+}
+
+.reviewWrapper>div:nth-child(2)>form>div:nth-child(2)>button{
+    padding: 5px 20px;
+    font-size: large;
+    font-weight: bold;
+    background-color: orange;
+    color: white;
+    border: none;
+    outline: none;
+    border-radius: 15px;
+    cursor: pointer;
+}
+
