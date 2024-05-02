@@ -1,67 +1,52 @@
-const express=require('express')
-const morgan=require('morgan')
+const express = require('express');
+const morgan = require('morgan');
 const cookieParser = require('cookie-parser');
-//const cors = require('cors');
-const cors = require('cors')
-const path = require('path')
+const cors = require('cors');
+const path = require('path');
 
+const AppError = require('./utils/appError');
+const globleErrorHandler = require('./controller/errorController');
 
-const AppError =require('./utils/appError')
-const globleErrorHandler=require('./controller/errorController')
-
-
-const dotenv=require('dotenv')
-dotenv.config({path:'./config.env'})
+const dotenv = require('dotenv');
+dotenv.config({ path: './config.env' });
 const _dirname = path.resolve();
 
+const userRouter = require('./routes/userRoutes');
+const venueRouter = require('./routes/venueRoutes');
+const reviewRouter = require('./routes/reviewRoutes');
+const requestRouter = require('./routes/requestRoutes');
 
-const userRouter=require('./routes/userRoutes')
-const venueRouter=require('./routes/venueRoutes')
-const reviewRouter=require('./routes/reviewRoutes')
-const requestRouter=require('./routes/requestRoutes');
-const { constants } = require('buffer');
+const app = express();
 
-const app=express();
-app.use(cors()) 
+// Configure CORS
+app.use(cors({
+  origin: 'http://localhost:3001', // Set the origin to match your frontend's URL
+  credentials: true,
+}));
 
-// app.use((req, res, next) => {
-//   res.header('Access-Control-Allow-Origin', '*');
-//   next();
-// });
-
-
-
-
-// app.use(cors({
-//   origin: ['http://localhost:3001', 'https://event-management-system-mern-1.onrender.com'], // Replace with your frontend's URL
-//     credentials: true,
-//   }));
-  
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
-app.use(cookieParser())
+app.use(cookieParser());
 
-
-if(process.env.NODE_ENV==='development'){
-    app.use(morgan('dev'))
+if (process.env.NODE_ENV === 'development') {
+  app.use(morgan('dev'));
 }
 
-app.use('/user',userRouter)
-app.use('/venue',venueRouter)
-app.use('/review',reviewRouter)
-app.use('/request',requestRouter)
+app.use('/user', userRouter);
+app.use('/venue', venueRouter);
+app.use('/review', reviewRouter);
+app.use('/request', requestRouter);
 
 app.use(express.static(path.join(_dirname, '/frontend/build')));
 
 app.get('*', (req, res) => {
-    res.sendFile(path.join(_dirname, 'frontend', 'build', 'index.html'));
-  })
+  res.sendFile(path.join(_dirname, 'frontend', 'build', 'index.html'));
+});
 
-app.all('*',function(req,res,next){
-    next(new AppError(`Can't find the ${req.originalUrl} on this server`))
-})
+app.all('*', function(req, res, next) {
+  next(new AppError(`Can't find the ${req.originalUrl} on this server`));
+});
 
-app.use(globleErrorHandler.handleErrors)
+app.use(globleErrorHandler.handleErrors);
 
-
-module.exports=app 
+module.exports = app;
