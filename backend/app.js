@@ -1,7 +1,7 @@
 const express=require('express')
 const morgan=require('morgan')
 const cookieParser = require('cookie-parser');
-const cors = require('cors');
+//const cors = require('cors');
 const path = require('path')
 
 
@@ -20,11 +20,15 @@ const requestRouter=require('./routes/requestRoutes')
 
 const app=express();
 
+app.use((req, res, next) => {
+  res.header('Access-Control-Allow-Origin', '*');
+  next();
+});
 
-app.use(cors({
-  origin: ['http://localhost:3001', 'https://event-management-system-mern-1.onrender.com'], // Replace with your frontend's URL
-    credentials: true,
-  }));
+// app.use(cors({
+//   origin: ['http://localhost:3001', 'https://event-management-system-mern-1.onrender.com'], // Replace with your frontend's URL
+//     credentials: true,
+//   }));
   
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
