@@ -28,6 +28,7 @@ exports.getAllVenues = catchAsync(async (req, res,next) => {
 
     const venues = isFilterEmpty ? await Venue.find() : await Venue.find(filter);
 
+  
     res.status(200).json({
         message: "success",
         results:venues.length,

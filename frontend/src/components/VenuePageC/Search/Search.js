@@ -19,7 +19,7 @@ export default function Search() {
         if (searchParams.size >= 0) {
             console.log(searchParams)
             
-            axios.get(`http://localhost:3000/venue`,{ params: searchParams })
+            axios.get(`http://localhost:3001/venue`,{ params: searchParams })
                 .then(response => {
                     setData(response.data.venues);  
                 })
