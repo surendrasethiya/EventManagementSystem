@@ -1,0 +1,118 @@
+.formWrapper{
+    height: 100%;
+    width: 75%;
+    justify-content: center;
+}
+
+.mainFormWrapper{
+    margin-top: 50px;
+    border: 1px solid black;
+    height: fit-content;
+    background-color: white;
+    padding: 50px 100px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 5%;
+    box-shadow: 0px 0px 20px black;
+}
+
+.mainFormWrapper>form{
+    width: 100%;
+    margin-top: 15px;
+}
+
+.eventSelector>label>span,.formOtherDetails>div>label>span{
+    color: red;
+}
+
+
+.mainFormWrapper>p:first-of-type {
+    color: red;
+  }
+
+  .mainFormWrapper>p:nth-of-type(2) {
+    color: gray;
+  }
+
+  .eventSelector {
+    margin-bottom: 15px;
+  }
+
+  .eventSelector label ,.formOtherDetails label,.formOtherDetails div label,  .addressWrapper label{
+    display: block;
+    margin-bottom: 5px;
+    text-align: left;
+  }
+
+  .eventSelector select,.formOtherDetails input,.formOtherDetails div input,  .addressWrapper textarea {
+    width: 100%;
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+    margin-bottom: 10px;
+  }
+
+  .formButton{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 25px;
+  }
+
+  .formButton>button{
+    padding: 10px 20px;
+    font-size: large;
+    font-weight: 500;
+    border: none;
+    outline: none;
+    background-color: #eb3437;
+    color: white;
+    cursor: pointer;
+  }
+
+  .formOtherDetails{
+    display: flex;
+    width: 100%;
+  }
+
+  .formOtherDetails>div:first-of-type{
+    flex: 1;
+    margin-right: 2.5%;
+  }
+
+  .formOtherDetails>div:last-child{
+    margin-left: 2.5%;
+    flex: 1;
+  }
+
+  .addressWrapper{
+    display: flex;
+    flex-direction: column;
+  }
+
+  .addressWrapper>textarea{
+    font-size: large;
+    height: fit-content;
+    resize: none;
+  }
+
+  @media (max-width:750px){
+    .formWrapper{
+      margin-top: 0%;  
+      width: 100%;
+  }
+
+  .mainFormWrapper{
+    width: 90%;
+    padding: 25px 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 5%;
+    box-shadow: 0px 0px 20px black;
+    margin-bottom: 50px;
+    margin-left: 22.5px;
+}
+  }

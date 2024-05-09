@@ -1,0 +1,85 @@
+.adminHomeCardWrapper{
+    width: 15%;
+    box-shadow:0px 0px 10px rgb(87, 81, 81);
+    background-color: transparent;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    border-radius: 5px;
+    text-decoration: none;
+    color: black; 
+}
+
+.adminHomeCardWrapper>img{
+    width: 100%;
+    height: 150px;
+    position: relative;
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+}
+
+
+.homeCardVenueDetailsWrapper{
+    padding: 3px 15px 15px 15px;
+}
+
+.homeCardVenueDetailsWrapper>div{
+    display: flex;
+    align-items: center;
+    margin-bottom: 8px;
+}
+
+.homeCardVenueDetailsWrapper>div>div:nth-child(1){
+    flex: 1;
+    text-align: left;
+}
+
+.homeCardVenueDetailsWrapper>h4{
+    text-align: left;
+    margin-bottom: 20px;
+    font-size: larger;
+}
+
+.homeCardVenueDetailsWrapper>h4::-webkit-scrollbar{
+    display: none;
+}
+
+.homeCardVenueDetailsWrapper>div:nth-child(3){
+    display: flex;
+    justify-content: space-between;
+}
+
+.homeCardVenueDetailsWrapper>div:nth-child(3)>button,
+.homeCardVenueDetailsWrapper>div:nth-child(3)>a>button{
+    padding: 5px 15px;
+    border: none;
+    outline: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: large;
+}
+
+.homeCardVenueDetailsWrapper>div:nth-child(3)>button:nth-child(1){
+    background-color: #d7101a;
+    color: white;
+}
+
+.homeCardVenueDetailsWrapper>div:nth-child(3)>button:nth-child(2),
+.homeCardVenueDetailsWrapper>div:nth-child(3)>a>button:nth-child(1){
+    background-color: greenyellow;
+    color: #333;
+}
+
+
+
+
+@media (max-width:750px){
+    .adminHomeCardWrapper{
+        width: 80%;    
+    }
+
+    .homeCardVenueDetailsWrapper>a>button{
+        margin-left: 55%;
+
+    }
+}

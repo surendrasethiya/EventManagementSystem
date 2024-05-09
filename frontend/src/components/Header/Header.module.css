@@ -1,0 +1,161 @@
+.headerWrapper {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: skyblue;
+    padding: 10px;
+    flex: 1;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    left: 0;
+    height: 8%;
+}
+
+.headerWrapper{
+    display: flex;
+    justify-content:space-between ;
+    align-items: center;
+    background-color:lightblue ;
+    padding: 10px;
+    flex: 1;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    left:0;
+    z-index: 999;
+
+}
+
+.logo{
+    height: 30px;
+    width: 150px;
+    margin-left: 30px;
+}
+
+.headerMenuWrapper{
+    margin-left: 0%;
+}
+
+.headerMenu{
+    display: flex;
+    list-style-type: none;
+}
+
+.headerMenu>li{
+    margin: 0 20px;
+    font-size: larger;
+    font-weight: 600;
+}
+
+.headerMenu>li>a{
+    text-decoration: none;
+    color: black;
+}
+
+.headerMenu>li>a:hover{
+    color:#ff7e01;
+}
+
+
+.headerMenu>li:hover{
+    transform: scale(1.15);
+}
+
+.headerButtonWrapper{
+    margin-right: 10px;
+}
+
+.headerButton{
+    margin: 0 15px;
+    padding: 8px 20px;
+    font-size: larger;
+    cursor: pointer;
+    border: none;
+    outline: none;
+    border-radius: 20px;
+}
+
+.headerButton.primary_button{
+    background-color: #faa935;
+    color: white;
+}
+
+.mobileView{
+    z-index: 999;
+    height: 100%;
+}
+
+.mobileView>ul>a{
+    text-align: center;
+    text-decoration: none;
+    font-size: x-large;
+}
+
+
+.mobileView>ul>a>li{
+    background-color: black;
+    color: white;
+    padding: 5px;
+    border-bottom: 2px solid gray;
+}
+
+.mobileView>ul>a>li:hover{
+   background: orange;
+}
+
+
+.hamburger{
+    display: none;
+}
+
+.profile_button{
+    justify-content: center;
+    align-items: center;
+    font-size: xx-large;
+    padding: 0px;
+
+}
+
+@media (max-width: 749px) {
+    .headerMenu {
+      display: none; /* Hide regular menu on smaller screens */
+      flex-direction: column;
+      position: absolute;
+      top: 60px;
+      left: 0;
+      width: 100%;
+      background-color: #333;
+    }
+
+    .primary_button,.sec_button,.profile_button{
+        display: none;
+    }
+
+    .hamburger{
+        display: block;
+    }
+
+
+    /* Header.module.css */
+
+.headerWrapper {
+    position: relative;
+  }
+  
+  .mobileView {
+    position: fixed;
+    left: 0;
+    width: 100%;
+    background-color: black; /* Adjust background color as needed */
+    z-index: 1000; /* Ensure it appears above other content */
+  }
+
+}
+
+@media(min-width:750px){
+    .hamburger,.cross,.mobileView{
+        display: none;
+    }
+}
+

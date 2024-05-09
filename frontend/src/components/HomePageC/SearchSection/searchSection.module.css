@@ -1,0 +1,81 @@
+
+.image_container {
+  position: relative;
+  width: 100%;
+  height: 400px;
+  background-image: url('searchBackground.jpg'); /* Replace with the path to your image */
+  background-size: cover;
+  background-position: center;
+  color: #fff;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.overlay_text {
+  font-size: 40px;
+  font-weight: bold;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+.searchWrapper{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+  margin-top: 25px;
+}
+
+.searchWrapper>div>input,.searchWrapper>div>select{
+  padding: 17px;
+  font-size: 20px;
+  outline: none;
+  border: none;
+}
+
+.searchWrapper>div>button{
+  padding: 17px;
+  font-size: 20px;
+  outline: none;
+  border: none;
+  background-color: #f7000c;
+  color: white;
+  cursor: pointer;
+}
+
+.searchWrapper>div>button:hover{
+  background-color: #d7101a;
+  
+}
+
+
+@media (max-width: 768px) {
+  .image_container {
+    height: 200px;
+  }
+
+  .overlay_text {
+    font-size: 16px;
+  }
+
+  .searchWrapper>div>input:nth-child(2),.searchWrapper>div>input:nth-child(3){
+    display: none;
+  }
+
+  .searchWrapper>div>input,.searchWrapper>div>select{
+    padding: 10px;
+    font-size: 18px;
+  }
+
+  .searchWrapper>div>button{
+    padding: 10px;
+    font-size: 18px;
+  }
+
+  .searchWrapper{
+    top: -40px;
+    margin-bottom: 20px;
+}
+}

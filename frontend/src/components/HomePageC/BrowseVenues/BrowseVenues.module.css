@@ -1,0 +1,38 @@
+/* Add these styles to your existing CSS */
+
+
+.browerVenuWrapper{
+    background-color: aqua;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.browerVenuWrapper{
+
+}
+
+.browerVenuCardWrapper {
+    display: flex;
+    justify-content:center;
+    align-items: center;
+    overflow-x: scroll;
+    margin-inline: 5%;
+    gap: 20px;
+}
+
+.browerVenuCardWrapper::-webkit-scrollbar {
+    display: none;
+}
+
+.browerVenuCard {
+    flex: 0 0 auto;
+    margin-right: 10px;
+    padding: 20px; /* Adjust spacing between items */
+}
+
+
+
+
+

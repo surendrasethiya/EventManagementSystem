@@ -1,0 +1,49 @@
+.venueDetailsDesWrapper{
+    margin-top: 40px;
+    padding: 15px 30px;
+    box-shadow: 0px 0px 10px black;
+    border-radius: 5px;
+}
+
+.venueDetailsDesWrapper>div:nth-child(1)>p:nth-child(1){
+    font-size: xx-large;
+    flex: 1;
+}
+
+.venueDetailsDesWrapper>div:nth-child(1){
+    display: flex;
+    align-items: center;
+    width: 100%;
+    margin-bottom: 5px;
+}
+
+.venueDetailsDesWrapper>div:nth-child(1)>p:nth-child(2){
+    font-size: large;
+}
+
+.venueDetailsDesWrapper>div:nth-child(1)>p:nth-child(2)>span{
+    font-size: large;
+    color: rgb(175, 118, 12);
+    position: relative;
+    right: 0;
+}
+
+.venueDetailsDesWrapper>div:nth-child(2){
+    display: flex;
+}
+
+.venueDetailsDesWrapper>p{
+    margin-bottom: 15px;
+}
+
+
+.venueDetailsDesWrapper>div:nth-child(2)>p{
+    margin-right: 20px;
+    margin-bottom: 5px;
+}
+
+.venueDetailsDesWrapper>div:nth-child(4)>p:nth-child(1){
+    font-size: larger;
+    font-weight: 500;
+    margin-bottom: 5px;
+}

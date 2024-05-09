@@ -1,0 +1,33 @@
+.inquiryPageWrapper{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+    margin-top: 100px;
+}
+
+.inquiryPageWrapper>div:nth-child(1){
+    width: 80%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 20px 30px;
+    flex-direction: column;
+}
+
+.inquiryPageWrapper>div:nth-child(1)>p{
+    font-size: x-large;
+    font-weight: 500;
+    text-decoration: underline;
+}
+
+@media (max-width:750px){
+    .inquiryPageWrapper{
+      margin-top: 0%;  
+      width: 100%;
+  }
+
+  .inquiryPageWrapper>div:nth-child(1){
+    padding: 0;
+}
+}
