@@ -16,7 +16,7 @@ export default function VenueDetails() {
   useEffect(() => {
     // Define a function to fetch venue data
     const fetchVenueData = async () => {
-        await axios.get(`http://localhost:3000/venue/${venueId}`)
+        await axios.get(`http://localhost:3001/venue/${venueId}`)
         .then(response => {
             setVenueData(response.data);  
             setLoading(false)
@@ -39,7 +39,7 @@ export default function VenueDetails() {
                         <ImageCrousel venueData={venueData}/>
                     </div>
                     <VenueDetailsDes venueData={venueData}/>
-                    <Review venueData={venueData}/>
+                    {/* <Review venueData={venueData}/> */}
                 </div>
                 {/* right */}
                 <div>

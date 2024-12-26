@@ -64,3 +64,33 @@
     transform: rotate(360deg);
   }
 }
+
+#dark 
+.HowItWorkCard_howItWorkCardWrapper__RHuG9{
+  color: black;
+  border: 10px solid wheat;
+}
+
+#dark 
+
+.UniquevenueCard_uniqueVenueCardDetailWrapper__f-5gU{
+  color: white;
+  border: 2.5px solid beige;
+}
+#dark .GetQuote_getQuoteWrapper__QUh2C>div>p {
+  color: white;
+  border: 0.5px solid beige;
+}
+#dark .HowitWork_howItWorkWrapper__lviD4>p {
+  color: white;
+}
+#dark .VenueCard_venueDetailsWrapper__-NI4C{
+  color: white;
+  border: 2px solid beige;
+}
+#dark 
+.AdminHomeCard_homeCardVenueDetailsWrapper__dHGrg {
+  color: rgb(255, 255, 255);
+  border: 2px solid beige;
+
+}
